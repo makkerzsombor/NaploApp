@@ -16,13 +16,13 @@ namespace NaploApp.Models
         public int Id { get; set; }
 
         [ObservableProperty]
-        private string description;
+        private string description = string.Empty;
 
         [ObservableProperty]
-        private DateTime date;
+        private DateTime date = DateTime.Now;
 
         // képnek
         [ObservableProperty]
-        private string imagestring;
+        private string imagestring = string.Empty;
     }
 }

@@ -43,7 +43,7 @@ namespace NaploApp.ViewModels
         public CreateViewModel() 
         {
             this.Posts = new ObservableCollection<Post>();
-            this.SelectedPost = this.Posts[0];
+            this.SelectedPost = null;
             C_Create = new Command(Create);
         }
     }

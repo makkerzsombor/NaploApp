@@ -3,7 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NaploApp.Pages.HomePage"
              Title="HomePage">
-    <VerticalStackLayout>
-        <Label Text="Itt lesznek a bejegyzések"/>
+    <VerticalStackLayout Padding="12" Spacing="8">
+        <Label Text="Bejegyzések" FontSize="Title" />
+
+        <CollectionView x:Name="PostsCollection"
+                    ItemsSource="{Binding Posts}"
+                    SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,4" Padding="10" CornerRadius="6">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Description}" FontAttributes="Bold"/>
+                            <Label Text="{Binding Date, StringFormat='{0:yyyy-MM-dd HH:mm}'}" FontSize="Small" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>
