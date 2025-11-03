@@ -4,11 +4,28 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:NaploApp"
+    xmlns:pages="clr-namespace:NaploApp.Pages"
     Title="NaploApp">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Create"
+        ContentTemplate="{DataTemplate pages:CreatePage}"
+        Route="CreatePage" />
+
+    <ShellContent
+        Title="Edit"
+        ContentTemplate="{DataTemplate pages:EditPage}"
+        Route="EditPage" />
+
+    <ShellContent
+        Title="File"
+        ContentTemplate="{DataTemplate pages:FilePage}"
+        Route="FilePage" />
+
 
 </Shell>
