@@ -13,6 +13,11 @@
         Route="MainPage" />
 
     <ShellContent
+        Title="Posts"
+        ContentTemplate="{DataTemplate pages:HomePage}"
+        Route="HomePage" />
+    
+    <ShellContent
         Title="Create"
         ContentTemplate="{DataTemplate pages:CreatePage}"
         Route="CreatePage" />

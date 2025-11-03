@@ -8,5 +8,6 @@ namespace NaploApp.ViewModels
 {
     internal class EditViewModel
     {
+
     }
 }
